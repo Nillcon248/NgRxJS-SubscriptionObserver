@@ -1,13 +1,10 @@
 {
 	"name": "ngx-subscription-observer",
-	"version": "1.0.3",
+	"version": "1.0.4",
 	"main": "dist/index.js",
 	"description": "Method decorator that automatically subscribes and unsubscribes from observables and events",
 	"scripts": {
-		"build": "tsc",
-		"publish-patch": "npm version patch && npm publish",
-		"publish-minor": "npm version patch && npm minor",
-		"publish-major ": "npm version patch && npm major"
+		"build": "tsc"
 	},
 	"devDependencies": {
 		"typescript": "^2.9.2"
