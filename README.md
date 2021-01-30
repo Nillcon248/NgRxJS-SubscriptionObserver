@@ -34,7 +34,8 @@ You must not call your methods and make your init method dirty, just use decorat
     // Need to implement, library use it for unsubscribe your subscriptions
     ngOnDestroy() {}
     
-    // This decorator will automatically call your method and remove subscription after component have destroyed
+    // This decorator will automatically call your method and remove subscription 
+    // after component have destroyed
     @SubscriptionObserver()
     initUserSubscription(): Subscription {
       return this.userService.data$.subscribe(console.log)
