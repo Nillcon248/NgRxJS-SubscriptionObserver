@@ -4,48 +4,5 @@
     "analytics": "521366f1-9ded-4d45-aff5-f90a4318bfa1"
   },
   "version": 1,
-  "newProjectRoot": "projects",
-  "projects": {
-    "ngx-subscription-observer": {
-      "projectType": "library",
-      "root": "projects/ngx-subscription-observer",
-      "sourceRoot": "projects/ngx-subscription-observer/src",
-      "prefix": "lib",
-      "architect": {
-        "build": {
-          "builder": "@angular-devkit/build-angular:ng-packagr",
-          "options": {
-            "tsConfig": "projects/ngx-subscription-observer/tsconfig.lib.json",
-            "project": "projects/ngx-subscription-observer/ng-package.json"
-          },
-          "configurations": {
-            "production": {
-              "tsConfig": "projects/ngx-subscription-observer/tsconfig.lib.prod.json"
-            }
-          }
-        },
-        "test": {
-          "builder": "@angular-devkit/build-angular:karma",
-          "options": {
-            "main": "projects/ngx-subscription-observer/src/test.ts",
-            "tsConfig": "projects/ngx-subscription-observer/tsconfig.spec.json",
-            "karmaConfig": "projects/ngx-subscription-observer/karma.conf.js"
-          }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "projects/ngx-subscription-observer/tsconfig.lib.json",
-              "projects/ngx-subscription-observer/tsconfig.spec.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
-          }
-        }
-      }
-    }
-  },
-  "defaultProject": "ngx-subscription-observer"
+  "newProjectRoot": "src"
 }
