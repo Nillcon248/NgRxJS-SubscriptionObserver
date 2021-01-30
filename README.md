@@ -1,5 +1,9 @@
 ## Angular - Subscription decorator for pros 🐙
 
+[![npm](https://img.shields.io/npm/dt/ngx-subscription-observer.svg)]()
+[![npm](https://img.shields.io/npm/l/ngx-subscription-observer.svg)]()
+[![Build status](https://travis-ci.org/Nillcon248/ngx-subscription-observer.svg?branch=main)](https://travis-ci.org/Nillcon248/ngx-subscription-observer)
+
 ### Method decorator that will automatically call method with subscription and unsubscribe after component have destroyed.
 
 # Installation
