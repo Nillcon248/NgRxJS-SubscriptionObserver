@@ -1,1 +1,1 @@
-export * from './subscription-observer.decorator';
+export { SubscriptionObserver } from './subscription-observer.decorator';
