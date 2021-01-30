@@ -1,14 +1,13 @@
 {
-	"name": "ngx-subscription-observe",
-	"version": "0.0.0",
+	"name": "ngx-subscription-observer",
+	"version": "1.0.0",
 	"main": "dist/index.js",
 	"description": "Method decorator that automatically subscribes and unsubscribes from observables and events",
 	"scripts": {
-		"build": "rmdir /Q /S dist && tsc",
-		"prepublish": "rmdir /Q /S dist && npm run build"
+		"build": "tsc"
 	},
 	"devDependencies": {
-		"typescript": "^2.8.3"
+		"typescript": "^2.9.2"
 	},
 	"author": {
 		"name": "Nillcon",
