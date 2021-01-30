@@ -1,5 +1,9 @@
 ## Angular - Subscription decorator for pros 🐙
 
+[![npm](https://img.shields.io/npm/dt/ngx-subscription-observer.svg)]()
+[![npm](https://img.shields.io/npm/l/ngx-subscription-observer.svg)]()
+[![Build status](https://travis-ci.org/Nillcon248/ngx-subscription-observer.svg?branch=main)](https://travis-ci.org/Nillcon248/ngx-subscription-observer)
+
 ### Method decorator that will automatically call method with subscription and unsubscribe after component have destroyed.
 
 # Installation
@@ -30,7 +34,8 @@ You must not call your methods and make your init method dirty, just use decorat
     // Need to implement, library use it for unsubscribe your subscriptions
     ngOnDestroy() {}
     
-    @SubscriptionObserver() // This decorator will automatically call your method and remove subscription after component have destroyed
+    // This decorator will automatically call your method and remove subscription after component have destroyed
+    @SubscriptionObserver()
     initUserSubscription(): Subscription {
       return this.userService.data$.subscribe(console.log)
     }
