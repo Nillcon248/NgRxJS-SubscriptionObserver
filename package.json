@@ -1,6 +1,6 @@
 {
 	"name": "ngx-subscription-observer",
-	"version": "1.0.1",
+	"version": "1.0.3",
 	"main": "dist/index.js",
 	"description": "Method decorator that automatically subscribes and unsubscribes from observables and events",
 	"scripts": {
