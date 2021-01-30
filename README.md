@@ -1,27 +1,39 @@
-# LibrariesWorkspace
+## Angular - Subscription decorator for pros 🐙
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.1.2.
+### Method decorator that will automatically call method with subscription and unsubscribe after component have destroyed.
 
-## Development server
+# Installation
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+`npm install ngx-subscription-observer --save`
 
-## Code scaffolding
+## Idea
+The main idea of this library is remove useless subscription properties from class.
+You must not call your methods and make your init method dirty, just use decorator and dont think about subscription destroyed
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Usage
 
-## Build
+```js
+  import { SubscriptionObserver } from "ngx-subscription-observer";
+  
+  @Component({
+    selector: 'app-component'
+  })
+  class AppComponent implements OnInit, OnDestroy {
+  
+    constructor(
+      private readonly userService: UserService
+    ) {}
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+    // Need to implement, library use it for call your methods
+    ngOnInit() {}
+    
+    // Need to implement, library use it for unsubscribe your subscriptions
+    ngOnDestroy() {}
+    
+    @SubscriptionObserver() // This decorator will automatically call your method and remove subscription after component have destroyed
+    initUserSubscription(): Subscription {
+      return this.userService.data$.subscribe(console.log)
+    }
+  }
+```
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
