@@ -9,6 +9,7 @@
 	"devDependencies": {
 		"typescript": "^2.9.2"
 	},
+	"typings": "./dist/index.d.ts",
 	"author": {
 		"name": "Nillcon",
 		"email": "nillcon248@gmail.com",
